@@ -1,0 +1,34 @@
+name: scu-gpa-mcp-server
+displayName: SCU GPA MCP Server
+description: 四川大学本科生绩点计算MCP服务，严格遵循川大官方十二级绩点标准，支持百分制/等级制换算、批量加权绩点计算
+version: 1.0.0
+author: yuanmouensis313
+homepage: https://github.com/yuanmouensis313/scu-gpa-mcp-server
+license: MIT
+categories:
+  - education
+  - tools
+tags:
+  - gpa
+  - 四川大学
+  - 绩点计算
+  - education
+  - scu
+runtime: python
+entrypoint: server.py
+startCommand:
+  type: stdio
+  command: python
+  args:
+    - server.py
+tools:
+  - name: calc_single_course_gpa_by_score
+    description: 计算单门课程绩点（百分制成绩），需传入课程名称、学分、百分制成绩
+  - name: calc_single_course_gpa_by_grade
+    description: 计算单门课程绩点（等级制成绩），需传入课程名称、学分、等级
+  - name: calc_batch_courses_gpa
+    description: 批量计算多门课程的总学分、总加权绩点、平均加权绩点，传入课程列表JSON字符串
+  - name: get_scu_gpa_standard_rule
+    description: 获取四川大学官方十二级绩点换算标准规则说明
+  - name: get_supported_grade_list
+    description: 获取支持的等级制成绩列表

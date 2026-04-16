@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scu-gpa-mcp-server"
+version = "1.0.0"
+description = "四川大学本科生绩点计算MCP服务器，严格遵循川大官方十二级绩点标准"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "yuanmouensis", "email = "2025226245036@stu.scu.edu.cn"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "hello-agents>=0.2.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/yuanmouensis313/scu-gpa-mcp-server"
+Repository = "https://github.com/yuanmouensis313/scu-gpa-mcp-server"
+"Bug Tracker" = "https://github.com/yuanmouensis313/scu-gpa-mcp-server/issues"
+
+[tool.setuptools]
+py-modules = ["server"]
